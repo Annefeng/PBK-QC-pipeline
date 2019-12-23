@@ -7,7 +7,7 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 	- SNP-level call rate >0.95
 	- Sample-level call rate >0.98
 	- SNP-level call rate >0.98
-	- Maximum SNP-level missing rate difference between two batches < empiricla threshold cutoff (e.g., 1%)
+	- Maximum SNP-level missing rate difference between two batches < empirical threshold cutoff (e.g., 1%)
 
 - Merge genotyping batches (`scripts 05-06`)
 	- Remove duplicated SNPs
@@ -26,7 +26,7 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 - QC within European samples (metrics may be affected by ancestry; `scripts 09-13`)
 	- Remove samples that fail sex check (--check-sex)
-	- Absolute value of autosomal F-stat/inbreeding coeff >0.2 or heterozygosity rate deviating 3sd from the mean (--het)
+	- Absolute value of autosomal heterozygosity rate deviating 3 or 5sd from the mean (--het)
 	- Identify unrelated Individuals (Pi_hat <0.2) within European samples
 	- Remove SNPs that show batch associations
 		- Regress each batch indicator on SNPs, adjusting for sex (empirically pick a threshold)
@@ -36,8 +36,11 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 - Final SNP-level QC within unrelated European samples (`script 15`)
 	- SNP-level call rate >0.98
 	- HWE >1E-10
+	- Retain only autosomal SNPs, excluding indels and monomorphic SNPs (for imputation)
 
 - Prepare data for HRC imputation using Michigan server (`scripts 16-17`)
+	- Harmonize study data with HRC data
+	- Convert plink to vcf by chromosome
 
 - Send unrelated European samples to Michigan server for imputation (using HRC as the reference panel)
 
@@ -65,10 +68,10 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 | Monomorphic SNPs  | 224,033  | 3.2%  |
 | Not confidently mapped  | 662  | 0.01%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Showing batch association  | 5,906  | 0.09%  |
+| Showing batch association (p<1e-04)  | 5,906  | 0.09%  |
 | **_Final QC:_**  |   |   |
 | SNP-level call rate <0.98  | 5,906  | 0.09%  |
-| HWE <1E-10  | 5,906  | 0.09%  |
+| HWE <1e-10  | 5,906  | 0.09%  |
 | **_HRC QC:_**  |   |   |
 | xxx  | 5,906  | 0.09%  |
 
@@ -76,7 +79,7 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
   
 #### Initial sample count: 36,424
 
-| Sample QC metric  | #Cases removed | #Ctrls removed |
+| Sample QC metric  | #Sample removed | % Removed |
 | ------------- | -------------: | -------------: |
 | Sample-level call rate <0.98  | 0  | 0  |
 | Non-European  | 2034  | 399  |
