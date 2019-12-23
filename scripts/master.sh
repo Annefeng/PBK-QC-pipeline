@@ -34,7 +34,7 @@ if [ $module == "preimpqc" ]; then
     fi
 
     #--------------------------------------------------------#
-    # Identify SNPs with differentail missng rate difference #
+    #       Identify SNPs with differentail missng rate      #
     #--------------------------------------------------------#
 
     # - plot SNP missing rate diff across batches based on overlapping SNPs
