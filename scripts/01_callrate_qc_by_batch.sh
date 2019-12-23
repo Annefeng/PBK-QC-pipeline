@@ -69,4 +69,3 @@ echo "Ninds with call rate >0.98 "$(cat pbk_geno05_mind02.indlist | wc -l) >> qc
 echo "Nsnps with call rate >0.98 "$(cat pbk_geno05_mind02_geno02.snplist | wc -l) >> qc_summary.tsv
 
 
-# touch $preqcdir/$batch/_SUCCESS.callrate.qc
