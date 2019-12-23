@@ -59,21 +59,21 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 | Variant QC metric  | #Variants removed | % Removed |
 | ------------- | -------------: | -------------: |
 | **_Batch QC:_**  |   |   |
-| SNP call rate QC1 (<0.95)  | 614,459  | 8.9%  |
-| SNP call rate QC2 (<0.98)  | 69,003  | 1.0%  |
-| Missing rate diff > 0.0075  | 2,996,409  | 43.4%  |
+| SNP call rate QC1 (<0.95)  | xx  | xx%  |
+| SNP call rate QC2 (<0.98)  | xx  | xx%  |
+| Missing rate diff > 0.0075  | xx  | xx%  |
 | **_Merged QC:_**  |   |   |
-| Total  | 220,614  | 3.2%  |
-| Duplicated SNPs  | 220,614  | 3.2%  |
-| Monomorphic SNPs  | 224,033  | 3.2%  |
-| Not confidently mapped  | 662  | 0.01%  |
+| Total  | xx  | xx%  |
+| Duplicated SNPs  | xx  | xx%  |
+| Monomorphic SNPs  | xx  | xx%  |
+| Not confidently mapped  | xx  | xx%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Showing batch association (p<1e-04)  | 5,906  | 0.09%  |
+| Showing batch association (p<1e-04)  | xx  | xx%  |
 | **_Final QC:_**  |   |   |
-| SNP-level call rate <0.98  | 5,906  | 0.09%  |
-| HWE <1e-10  | 5,906  | 0.09%  |
+| SNP-level call rate <0.98  | xx  | xx%  |
+| HWE <1e-10  | xx  | xx%  |
 | **_HRC QC:_**  |   |   |
-| xxx  | 5,906  | 0.09%  |
+| xxx  | xx  | xx%  |
 
 
   
@@ -82,10 +82,10 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 | Sample QC metric  | #Sample removed | % Removed |
 | ------------- | -------------: | -------------: |
 | Sample-level call rate <0.98  | 0  | 0  |
-| Non-European  | 2034  | 399  |
-| Failing sex check  | 154  | 30  |
-| Outliying heterozygosity rate  | 34  | 36  |
-| IBD relatedness > 0.2  | 218  | 156  |
+| Non-European  | xx  | xx%  |
+| Failing sex check  | xx  | xx%  |
+| Outliying heterozygosity rate  | xx  | xx%  |
+| IBD relatedness > 0.2  | xx  | xx%  |
 
 
 
@@ -93,10 +93,10 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 | Population  | #N | % |
 | ------------- | -------------: | -------------: |
-| EUR  | 26,677  | 0  |
-| AMR  | 1,840  | 0  |
-| AFR  | 1,607  | 0  |
-| EAS  | 504  | 0  |
-| SAS  | 297  | 0  |
-| Unknown/unclassified  | 0  | 0  |
-| Total  | 36,424  | 100  |
+| EUR  | 26,677  | xx%  |
+| AMR  | 1,840  | xx%  |
+| AFR  | 1,607  | xx%  |
+| EAS  | 504  | xx%  |
+| SAS  | 297  | xx%  |
+| Unknown/unclassified  | xx  | xx%  |
+| Total  | 36,424  | 100%  |
