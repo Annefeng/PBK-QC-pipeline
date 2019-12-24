@@ -60,10 +60,10 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 
 ### Genetic ancestry assignment
 
-|     |  EUR   |  AMR   |  AFR   |  EAS   |  SAS   | Unclassified | Total |
+| 1KG superpop    |  EUR   |  AMR   |  AFR   |  EAS   |  SAS   | Unclassified | Total |
 | --- | -----: | -----: | -----: | -----: | -----: | -----------: | -----:|   
-| N | 26,677 | 1,840 | 1,607 | 504 | 297 | 5,499 | 3,6424 |
-| % | 73.2% | 5.1% | 4.4% | 1.4% | 0.8% | 15.1% | 100% |
+| #Samples | 26,677 | 1,840 | 1,607 | 504 | 297 | 5,499 | 3,6424 |
+| %Total | 73.2% | 5.1% | 4.4% | 1.4% | 0.8% | 15.1% | 100% |
 
 
 
