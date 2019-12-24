@@ -57,21 +57,34 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 #### Ancestral popuation assignment (pred. prob. > 0.9)
 
-| Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 |
-| ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
-| EUR  | 26,677  | 73.2%  | xx  | xx  | xx  | xx  | xx  | xx  |
-| AMR  | 1,840  | 5.1%  | xx  | xx  | xx  | xx  | xx  | xx  |
-| AFR  | 1,607  | 4.4%  | xx  | xx  | xx  | xx  | xx  | xx  |
-| EAS  | 504  | 1.4%  | xx  | xx  | xx  | xx  | xx  | xx  |
-| SAS  | 297  | 0.8%  | xx  | xx  | xx  | xx  | xx  | xx  |
-| Unclassified  | 5,499  | 15.1%  | xx  | xx  | xx  | xx  | xx  | xx  |
-| Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  |
+| Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 | Batch8 |
+| ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
+| EUR  | 26,677  | 73.2%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
+| AMR  | 1,840  | 5.1%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
+| AFR  | 1,607  | 4.4%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
+| EAS  | 504  | 1.4%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
+| SAS  | 297  | 0.8%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
+| Unclassified  | 5,499  | 15.1%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
+| Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
 
 
-#### Initial variant count: around 1M
+#### Sample QC
 
-| Variant QC metric  | #Variants removed | % Removed |
+| Sample QC metric  | #Samples | %Total |
 | ------------- | -------------: | -------------: |
+| Initial sample size  |  36,424 | 100%  |
+| Sample-level call rate <0.98  | 0  | 0%  |
+| Non-European  | xx  | xx%  |
+| Failing sex check  | xx  | xx%  |
+| Outliying heterozygosity rate  | xx  | xx%  |
+| IBD relatedness > 0.2  | xx  | xx%  |
+
+
+#### Variant QC
+
+| Variant QC metric  | #Variants | %Total |
+| ------------- | -------------: | -------------: |
+| Initial variant count | around 1M | 100% |
 | **_Batch QC:_**  |   |   |
 | SNP call rate QC1 (<0.95)  | xx  | xx%  |
 | SNP call rate QC2 (<0.98)  | xx  | xx%  |
@@ -89,16 +102,6 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 | **_HRC QC:_**  |   |   |
 | xxx  | xx  | xx%  |
 
-  
-#### Initial sample count: 36,424
-
-| Sample QC metric  | #Sample removed | % Removed |
-| ------------- | -------------: | -------------: |
-| Sample-level call rate <0.98  | 0  | 0  |
-| Non-European  | xx  | xx%  |
-| Failing sex check  | xx  | xx%  |
-| Outliying heterozygosity rate  | xx  | xx%  |
-| IBD relatedness > 0.2  | xx  | xx%  |
 
 
 
