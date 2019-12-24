@@ -93,9 +93,9 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | ------------- | -------------: | -------------: |
 | Initial variant count (avg. across batches) | 1.7M | - |
 | **_Batch QC:_**  |   |   |
-| SNP call rate < 0.95 (-> sample call rate QC) -> SNP call rate < 0.98 <br>(avg. across batches)| 20K  | -  |
+| SNP call rate QC1 (< 0.95) -> QC2 (< 0.98; avg. across batches)| 20K  | -  |
 | Common across batches | 1,370,695 | - |
-| Missing rate diff > 0.0075 between any two batches  | 48,929  | -  |
+| Missing rate difference > 0.0075 between any two batches  | 48,929  | -  |
 | **_Merged QC:_**  |   |   |
 | Total  | 1,321,766  | 100%  |
 | Monomorphic SNPs  | 122,742  | 9.3%  |
@@ -106,7 +106,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | Showing batch association (p < 1e-04)  | 2,316  | 0.18%  |
 | **_Final QC:_**  |   |   |
 | SNP-level call rate < 0.98  | 1  | 7e-05%  |
-| HWE < 1e-10  | 2375  | 0.18%  |
+| pHWE < 1e-10  | 2375  | 0.18%  |
 | Non-autosomal, indel, or monomorphic  | 125,030  | 9.5%  |
 | **_HRC QC:_**  |   |   |
 | Not in HRC or mismatched info  | 138,359  | 10.5%  |
