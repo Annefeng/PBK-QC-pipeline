@@ -80,11 +80,11 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | **_Merged QC:_**  |   |   |
 | Non-European | 9,747  | 26.8%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Failing sex check <br>(unknown sex or reported != imputed, <br>using F<0.25 for female & >0.75 for male) | 25  | 0.07%  |
-| Outlying heterozygosity rate <br>(>5SD from the mean) | 50  | 0.14%  |
+| Failing sex check (unknown sex or reported != imputed, <br>using F<0.25 for female & >0.75 for male) | 25  | 0.07%  |
+| Outlying heterozygosity rate (>5SD from the mean) | 50  | 0.14%  |
 | IBD relatedness > 0.2 | 908  | 2.5%  |
-| Any of the above three: | 979  | 2.7%  |
-| **_Post-QC:_** | 25,698  | 70.6%  |
+| _Any of the above three_ | 979  | 2.7%  |
+| **_Post-QC_** | 25,698  | 70.6%  |
 
 
 ### Variant QC
