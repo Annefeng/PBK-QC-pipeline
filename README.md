@@ -32,7 +32,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 - QC within European samples (metrics may be affected by ancestry; `scripts 09-13`)
 	- Remove samples that fail sex check (--check-sex)
-	- Absolute value of autosomal heterozygosity rate deviating 3 or 5sd from the mean (--het)
+	- Absolute value of autosomal heterozygosity rate deviating from the mean (--het)
 	- Identify unrelated Individuals (Pi_hat <0.2) within European samples
 	- Remove SNPs that show batch associations
 		- Regress each batch indicator on SNPs, adjusting for sex (empirically pick a threshold)
@@ -80,7 +80,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | **_Merged QC:_**  |   |   |
 | Non-European | 9,747  | 26.8%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Failing sex check (unknown sex or reported != imputed, <br>using F<0.25 for female & >0.75 for male) | 25  | 0.07%  |
+| Failing sex check (reported != imputed sex, using F<0.25 for <br>female & >0.75 for male) | 25  | 0.07%  |
 | Outlying heterozygosity rate (>5SD from the mean) | 50  | 0.14%  |
 | IBD relatedness > 0.2 | 908  | 2.5%  |
 | _Any of the above three_ | 979  | 2.7%  |
