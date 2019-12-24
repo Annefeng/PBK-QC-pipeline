@@ -56,6 +56,7 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 
 #### Ancestral popuation assignment (pred. prob. > 0.9)
+------
 
 | Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 | Batch8 |
 | ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
@@ -69,18 +70,20 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 
 #### Sample QC
+------
 
-| Sample QC metric  | #Samples | %Total |
-| ------------- | -------------: | -------------: |
-| Initial sample size  |  36,424 | 100%  |
+| Sample QC metric | #Samples | %Total |
+| ---------------- | -------: | -----: |
+| Initial sample size | 36,424 | 100%  |
 | Sample-level call rate <0.98  | 0  | 0%  |
-| Non-European  | xx  | xx%  |
-| Failing sex check  | xx  | xx%  |
-| Outliying heterozygosity rate  | xx  | xx%  |
-| IBD relatedness > 0.2  | xx  | xx%  |
+| Non-European | xx  | xx%  |
+| Failing sex check | xx  | xx%  |
+| Outliying heterozygosity rate | xx  | xx%  |
+| IBD relatedness > 0.2 | xx  | xx%  |
 
 
 #### Variant QC
+------
 
 | Variant QC metric  | #Variants | %Total |
 | ------------- | -------------: | -------------: |
