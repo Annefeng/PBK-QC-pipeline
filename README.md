@@ -60,15 +60,11 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 
 ### Genetic ancestry assignment
 
-| Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 | Batch8 |
-| ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
-| EUR  | 26,677  | 73.2%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
-| AMR  | 1,840  | 5.1%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
-| AFR  | 1,607  | 4.4%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
-| EAS  | 504  | 1.4%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
-| SAS  | 297  | 0.8%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
-| Unclassified  | 5,499  | 15.1%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
-| Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
+|     |  EUR   |  AMR   |  AFR   |  EAS   |  SAS   | Unclassified | Total |
+| --- | -----: | -----: | -----: | -----: | -----: | -----------: | -----:|   
+| N | 26,677 | 1,840 | 1,607 | 504 | 297 | 5,499 | 3,6424 |
+| % | 73.2% | 5.1% | 4.4% | 1.4% | 0.8% | 15.1% | 100% |
+
 
 
 ### Sample QC
@@ -76,14 +72,14 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 
 | Sample QC metric | #Samples | %Total |
 | ---------------- | -------: | -----: |
-| **_Batch QC:_**  |   |   |
 | Initial sample size | 36,424 | 100%  |
+| **_Batch QC:_**  |   |   |
 | Sample-level call rate <0.98  | 0  | 0%  |
 | **_Merged QC:_**  |   |   |
 | Non-European | xx  | xx%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Failing sex check <br>(unknown sex or reported!=imputed, <br>using F<0.25 for female & >0.75 for male) | xx  | xx%  |
-| Outliying heterozygosity rate (>5SD from the mean) | xx  | xx%  |
+| Failing sex check <br>(unknown sex or reported != imputed, <br>using F<0.25 for female & >0.75 for male) | xx  | xx%  |
+| Outlying heterozygosity rate <br>(>5SD from the mean) | xx  | xx%  |
 | IBD relatedness > 0.2 | xx  | xx%  |
 
 
