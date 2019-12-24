@@ -58,7 +58,7 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 
 ## Quality control summary tables
 
-#### Ancestral popuation assignment (pred. prob. > 0.9)
+### Genetic ancestry assignment
 
 | Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 | Batch8 |
 | ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
@@ -71,7 +71,7 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 | Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
 
 
-#### Sample QC
+### Sample QC
 - Samples are genotyped in batches, with the first severn batches each containing 5K individuas and the 8th batch around 900 individuals
 
 | Sample QC metric | #Samples | %Total |
@@ -82,7 +82,7 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 | **_Merged QC:_**  |   |   |
 | Non-European | xx  | xx%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Failing sex check (unknown sex or reported!=imputed, using F<0.25 for female & >0.75 for male) | xx  | xx%  |
+| Failing sex check <br>(unknown sex or reported!=imputed, <br>using F<0.25 for female & >0.75 for male) | xx  | xx%  |
 | Outliying heterozygosity rate (>5SD from the mean) | xx  | xx%  |
 | IBD relatedness > 0.2 | xx  | xx%  |
 
