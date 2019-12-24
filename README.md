@@ -55,8 +55,7 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 ## Quality control summary tables
 
 
-Ancestral popuation assignment (pred. prob. > 0.9)
-------
+#### Ancestral popuation assignment (pred. prob. > 0.9)
 
 | Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 | Batch8 |
 | ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
@@ -69,8 +68,7 @@ Ancestral popuation assignment (pred. prob. > 0.9)
 | Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
 
 
-Sample QC
-------
+#### Sample QC
 
 | Sample QC metric | #Samples | %Total |
 | ---------------- | -------: | -----: |
@@ -82,8 +80,7 @@ Sample QC
 | IBD relatedness > 0.2 | xx  | xx%  |
 
 
-Variant QC
-------
+#### Variant QC
 
 | Variant QC metric  | #Variants | %Total |
 | ------------- | -------------: | -------------: |
