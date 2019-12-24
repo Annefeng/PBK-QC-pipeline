@@ -100,7 +100,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | Total  | 1,321,766  | 100%  |
 | Monomorphic SNPs  | 122,742  | 9.3%  |
 | Duplicated SNPs  | 19,973  | 1.5%  |
-| Not confidently mapped  | 2,183  | 0.17%  |
+| Not confidently mapped (chr & pos=0)  | 2,183  | 0.17%  |
 | _Any of the above three_  | 144,456  | 10.9%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
 | Showing batch association (p < 1e-04)  | 2,316  | 0.18%  |
