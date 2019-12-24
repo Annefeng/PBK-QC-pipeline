@@ -1,8 +1,10 @@
 # Partners Biobank Genomics Data QC
 
-This repository details the quality control (QC) pipeline of the Partners Biobank genotype data (`N=36K as of Dec 2019`), which largely follows the recommendations described in:
+This repository details the quality control (QC) pipeline of the Partners Biobank genotype data, which largely follows the recommendations described in:
 
 Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B., Periyasamy, S., et al. (2019). Genome-wide Association Studies in Ancestrally Diverse Populations: Opportunities, Methods, Pitfalls, and Recommendations. Cell, 179(3), 589–603. http://doi.org/10.1016/j.cell.2019.08.051
+
+The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on Illumina’s Multi-Ethnic Global array.
 
 
 ## Quality control pipeline
@@ -62,8 +64,8 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 
 | 1KG superpop    |  EUR   |  AMR   |  AFR   |  EAS   |  SAS   | Unclassified | Total |
 | --- | -----: | -----: | -----: | -----: | -----: | -----------: | -----:|   
-| #Samples | 26,677 | 1,840 | 1,607 | 504 | 297 | 5,499 | 3,6424 |
-| %Total | 73.2% | 5.1% | 4.4% | 1.4% | 0.8% | 15.1% | 100% |
+| # Samples | 26,677 | 1,840 | 1,607 | 504 | 297 | 5,499 | 36,424 |
+| % Total | 73.2% | 5.1% | 4.4% | 1.4% | 0.8% | 15.1% | 100% |
 
 
 
@@ -74,13 +76,15 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 | ---------------- | -------: | -----: |
 | Initial sample size | 36,424 | 100%  |
 | **_Batch QC:_**  |   |   |
-| Sample-level call rate <0.98  | 0  | 0%  |
+| Sample-level call rate <0.98  | 0  | 0.0%  |
 | **_Merged QC:_**  |   |   |
-| Non-European | xx  | xx%  |
+| Non-European | 9,747  | 26.8%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Failing sex check <br>(unknown sex or reported != imputed, <br>using F<0.25 for female & >0.75 for male) | xx  | xx%  |
-| Outlying heterozygosity rate <br>(>5SD from the mean) | xx  | xx%  |
-| IBD relatedness > 0.2 | xx  | xx%  |
+| Failing sex check <br>(unknown sex or reported != imputed, <br>using F<0.25 for female & >0.75 for male) | 25  | 0.07%  |
+| Outlying heterozygosity rate <br>(>5SD from the mean) | 50  | 0.14%  |
+| IBD relatedness > 0.2 | 908  | 2.5%  |
+| Any of the above three: | 979  | 2.7%  |
+| **_Post-QC:_** | 25,698  | 70.6%  |
 
 
 ### Variant QC
