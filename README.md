@@ -54,6 +54,20 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 ## Quality control summary tables
 
+
+#### Ancestral popuation assignment (pred. prob. > 0.9)
+
+| Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 |
+| ----------- | -------------: | -----: | -----: | -----: | -----: | -----: | -----: |
+| EUR  | 26,677  | 73.2%  |
+| AMR  | 1,840  | 5.1%  |
+| AFR  | 1,607  | 4.4%  |
+| EAS  | 504  | 1.4%  |
+| SAS  | 297  | 0.8%  |
+| Unclassified  | 5,499  | 15.1%  |
+| Total  | 36,424  | 100%  |
+
+
 #### Initial variant count: around 1M
 
 | Variant QC metric  | #Variants removed | % Removed |
@@ -75,7 +89,6 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 | **_HRC QC:_**  |   |   |
 | xxx  | xx  | xx%  |
 
-
   
 #### Initial sample count: 36,424
 
@@ -89,14 +102,3 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 
 
-#### Popuation assignment (pred prob > 0.9)
-
-| Population  | #N | % |
-| ------------- | -------------: | -------------: |
-| EUR  | 26,677  | xx%  |
-| AMR  | 1,840  | xx%  |
-| AFR  | 1,607  | xx%  |
-| EAS  | 504  | xx%  |
-| SAS  | 297  | xx%  |
-| Unknown/unclassified  | xx  | xx%  |
-| Total  | 36,424  | 100%  |
