@@ -93,7 +93,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | ------------- | -------------: | -------------: |
 | Initial variant count (avg. across batches) | 1.7M | - |
 | **_Batch QC:_**  |   |   |
-| SNP call rate <0.95 (-> sample call rate QC) -> SNP call rate <0.98 (avg. across batches)| 20K  | -  |
+| SNP call rate <0.95 (-> sample call rate QC) <br>-> SNP call rate <0.98 (avg. across batches)| 20K  | -  |
 | Common across batches | 1,370,695 | - |
 | Missing rate diff > 0.0075 between any two batches  | 48,929  | -  |
 | **_Merged QC:_**  |   |   |
