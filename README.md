@@ -4,7 +4,7 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B., Periyasamy, S., et al. (2019). Genome-wide Association Studies in Ancestrally Diverse Populations: Opportunities, Methods, Pitfalls, and Recommendations. Cell, 179(3), 589–603. http://doi.org/10.1016/j.cell.2019.08.051
 
-The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on Illumina’s Multi-Ethnic Global array.
+The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on Illumina’s Multi-Ethnic Global array in hg19 coordinates.
 
 
 ## Quality control pipeline
