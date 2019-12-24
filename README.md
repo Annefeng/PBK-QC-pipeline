@@ -57,15 +57,15 @@ This repository details the quality control (QC) pipeline of the Partners Bioban
 
 #### Ancestral popuation assignment (pred. prob. > 0.9)
 
-| Population  | N | % | Batch1 | Batch2 | Batch3 |
-| ------------- | -------------: | -------------: | -------------: | -------------: | -------------: |
-| EUR  | 26,677  | 73.2%  | xx  | xx  | xx  |
-| AMR  | 1,840  | 5.1%  | xx  | xx  | xx  |
-| AFR  | 1,607  | 4.4%  | xx  | xx  | xx  |
-| EAS  | 504  | 1.4%  | xx  | xx  | xx  |
-| SAS  | 297  | 0.8%  | xx  | xx  | xx  |
-| Unclassified  | 5,499  | 15.1%  | xx  | xx  | xx  |
-| Total  | 36,424  | 100%  | xx  | xx  | xx  |
+| Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 |
+| ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
+| EUR  | 26,677  | 73.2%  | xx  | xx  | xx  | xx  | xx  | xx  |
+| AMR  | 1,840  | 5.1%  | xx  | xx  | xx  | xx  | xx  | xx  |
+| AFR  | 1,607  | 4.4%  | xx  | xx  | xx  | xx  | xx  | xx  |
+| EAS  | 504  | 1.4%  | xx  | xx  | xx  | xx  | xx  | xx  |
+| SAS  | 297  | 0.8%  | xx  | xx  | xx  | xx  | xx  | xx  |
+| Unclassified  | 5,499  | 15.1%  | xx  | xx  | xx  | xx  | xx  | xx  |
+| Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  |
 
 
 #### Initial variant count: around 1M
