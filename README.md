@@ -1,6 +1,7 @@
 # Partners Biobank Genomics Data QC
 
-This repository details the quality control (QC) pipeline of the Partners Biobank genotype data (currently 36K as of Dec 2019), which largely follows the recommendations described in:
+This repository details the quality control (QC) pipeline of the Partners Biobank genotype data (`N=36K as of Dec 2019`), which largely follows the recommendations described in:
+
 Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B., Periyasamy, S., et al. (2019). Genome-wide Association Studies in Ancestrally Diverse Populations: Opportunities, Methods, Pitfalls, and Recommendations. Cell, 179(3), 589–603. http://doi.org/10.1016/j.cell.2019.08.051
 
 
