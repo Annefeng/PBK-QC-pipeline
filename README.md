@@ -58,7 +58,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 
 
-## Quality control summary tables
+## Summary of pre-imputation QC
 
 ### Genetic ancestry assignment
 
@@ -95,20 +95,25 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | **_Batch QC:_**  |   |   |
 | SNP call rate QC1 (<0.95)  | xx  | xx%  |
 | SNP call rate QC2 (<0.98)  | xx  | xx%  |
-| Missing rate diff > 0.0075  | xx  | xx%  |
+| Common across batches | 1,370,695 | xx% |
+| Missing rate diff > 0.0075 between any two batches  | 48,929  | xx%  |
 | **_Merged QC:_**  |   |   |
-| Total  | xx  | xx%  |
-| Duplicated SNPs  | xx  | xx%  |
-| Monomorphic SNPs  | xx  | xx%  |
-| Not confidently mapped  | xx  | xx%  |
+| Total  | 1,321,766  | xx%  |
+| Monomorphic SNPs  | 122,742  | xx%  |
+| Duplicated SNPs  | 19,973  | xx%  |
+| Not confidently mapped  | 2,183  | xx%  |
+| _Any of the above three_  | 144,456  | xx%  |
 | **_EUR (pop-specific) QC:_**  |   |   |
-| Showing batch association (p<1e-04)  | xx  | xx%  |
+| Showing batch association (p<1e-04)  | 2,316  | xx%  |
 | **_Final QC:_**  |   |   |
-| SNP-level call rate <0.98  | xx  | xx%  |
-| HWE <1e-10  | xx  | xx%  |
+| SNP-level call rate <0.98  | 1  | xx%  |
+| HWE <1e-10  | 2375  | xx%  |
+| Non-autosomal, indel, or monomorphic  | 125,030  | xx%  |
 | **_HRC QC:_**  |   |   |
-| xxx  | xx  | xx%  |
+| Not in HRC or mismatched info  | 138,359  | xx%  |
+| **_Post-QC, send to Michigan imp. server_**  | 909,229  | xx%  |
 
 
 
+## Summary of post-imputation QC
 
