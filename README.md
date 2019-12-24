@@ -72,7 +72,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 ### Sample QC
 - Samples are genotyped in batches, with the first severn batches each containing 5K individuas and the 8th batch around 900 individuals
 
-| Sample QC metric | #Samples | %Total |
+| Sample QC metric | # Samples | % Total |
 | ---------------- | -------: | -----: |
 | Initial sample size | 36,424 | 100%  |
 | **_Batch QC:_**  |   |   |
@@ -89,7 +89,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 ### Variant QC
 
-| Variant QC metric  | #Variants | %Total |
+| Variant QC metric  | # Variants | % Total |
 | ------------- | -------------: | -------------: |
 | Initial variant count (avg. across batches) | 1.7M | - |
 | **_Batch QC:_**  |   |   |
