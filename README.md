@@ -58,7 +58,7 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 
 ## Quality control summary tables
 
-#### Ancestral popuation assignment (pred. prob. > 0.9)
+### Ancestral popuation assignment (pred. prob. > 0.9)
 
 | Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 | Batch8 |
 | ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
@@ -71,7 +71,8 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 | Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
 
 
-#### Sample QC: samples are genotyped in batches, with the first severn batches each containing 5K individuas and the 8th batch around 900 individuals
+### Sample QC
+- Samples are genotyped in batches, with the first severn batches each containing 5K individuas and the 8th batch around 900 individuals
 
 | Sample QC metric | #Samples | %Total |
 | ---------------- | -------: | -----: |
@@ -83,7 +84,7 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 | IBD relatedness > 0.2 | xx  | xx%  |
 
 
-#### Variant QC
+### Variant QC
 
 | Variant QC metric  | #Variants | %Total |
 | ------------- | -------------: | -------------: |
