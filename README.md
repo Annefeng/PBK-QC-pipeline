@@ -28,7 +28,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 		- Prune to <100K independent SNPs
 	- Identify individuals with European ancestry using selected SNPs
 		- Run PCA combining study samples + 1KG data
-		- Use Random Forest to classify genetic ancesty with a prediciton prob. > 0.9
+		- Use Random Forest to classify genetic ancesty with a prediciton prob. >0.9
 
 - QC within European samples (metrics may be affected by ancestry; `scripts 09-13`)
 	- Remove samples that fail sex check (--check-sex)
@@ -41,7 +41,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 - Final SNP-level QC within unrelated European samples (`script 15`)
 	- SNP-level call rate >0.98
-	- HWE >1E-10
+	- HWE >1e-10
 	- Retain only autosomal SNPs, excluding indels and monomorphic SNPs (for imputation)
 
 - Prepare data for HRC imputation using Michigan server (`scripts 16-17`)
@@ -53,7 +53,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 - Post-imputation QC
 	- INFO score >0.8
 	- MAF >1%
-	- HWE >1E-10
+	- HWE >1e-10
 	- SNP-level call rate (--geno) >0.98 (for hard-call genotypes)
 
 
