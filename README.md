@@ -71,7 +71,7 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 | Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
 
 
-#### Sample QC
+#### Sample QC: samples are genotyped in batches, with the first severn batches each containing 5K individuas and the 8th batch around 900 individuals
 
 | Sample QC metric | #Samples | %Total |
 | ---------------- | -------: | -----: |
