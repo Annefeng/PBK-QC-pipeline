@@ -58,7 +58,7 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 
 ## Quality control summary tables
 
-#### [ Ancestral popuation assignment (pred. prob. > 0.9) ]
+#### Ancestral popuation assignment (pred. prob. > 0.9)
 
 | Population  | N | % | Batch1 | Batch2 | Batch3 | Batch4 | Batch5 | Batch6 | Batch7 | Batch8 |
 | ------------- | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: | -------------: |
@@ -71,24 +71,27 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 | Total  | 36,424  | 100%  | xx  | xx  | xx  | xx  | xx  | xx  | xx  | xx  |
 
 
-#### [ Sample QC ]
+#### Sample QC
 - Samples are genotyped in batches, with the first severn batches each containing 5K individuas and the 8th batch around 900 individuals
 
 | Sample QC metric | #Samples | %Total |
 | ---------------- | -------: | -----: |
+| **_Batch QC:_**  |   |   |
 | Initial sample size | 36,424 | 100%  |
 | Sample-level call rate <0.98  | 0  | 0%  |
+| **_Merged QC:_**  |   |   |
 | Non-European | xx  | xx%  |
-| Failing sex check | xx  | xx%  |
-| Outliying heterozygosity rate | xx  | xx%  |
+| **_EUR (pop-specific) QC:_**  |   |   |
+| Failing sex check (unknown sex or reported!=imputed, using F<0.25 for female & >0.75 for male) | xx  | xx%  |
+| Outliying heterozygosity rate (>5SD from the mean) | xx  | xx%  |
 | IBD relatedness > 0.2 | xx  | xx%  |
 
 
-### [ Variant QC ]
+### Variant QC
 
 | Variant QC metric  | #Variants | %Total |
 | ------------- | -------------: | -------------: |
-| Initial variant count | around 1M | 100% |
+| Initial variant count | 1.7M | 100% |
 | **_Batch QC:_**  |   |   |
 | SNP call rate QC1 (<0.95)  | xx  | xx%  |
 | SNP call rate QC2 (<0.98)  | xx  | xx%  |
