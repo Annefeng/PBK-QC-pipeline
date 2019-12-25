@@ -42,7 +42,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 - Final SNP-level QC within unrelated European samples (`script 15`)
 	- SNP-level call rate >0.98
 	- HWE >1e-10
-	- Retain only autosomal SNPs, excluding indels and monomorphic SNPs (for imputation)
+	- Retain only autosomal SNPs, excluding indels and monomorphic SNPs (for imputation; HRC: SNP only)
 
 - Prepare data for HRC imputation using Michigan server (`scripts 16-17`)
 	- Harmonize study data with HRC data
@@ -61,6 +61,8 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 ## Summary of pre-imputation QC
 
 ### Genetic ancestry assignment
+- Random Forest prediction probability > 0.9 based on top 6 PCs, with 1KG samples as the training data
+- "Unclassified" consists of mostly admixed individuals
 
 | 1KG superpop    |  EUR   |  AMR   |  AFR   |  EAS   |  SAS   | Unclassified | Total |
 | --- | -----: | -----: | -----: | -----: | -----: | -----------: | -----:|   
@@ -70,7 +72,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 
 ### Sample QC
-- Samples are genotyped in batches, with the first severn batches each containing 5K individuas and the 8th batch around 900 individuals
+- Samples are genotyped in 8 batches, with the first 7 batches each containing 5K individuas and the 8th batch around 900 individuals
 
 | Sample QC metric | # Samples | % Total |
 | ---------------- | -------: | -----: |
