@@ -15,7 +15,7 @@ paste merge-bed.tmp merge-bim.tmp merge-fam.tmp > all_batches.txt
 rm merge*.tmp
 
 $PLINK \
---merge-list all_batches.txt \
+--merge-list plink-merge-all-batches.txt \
 --make-bed \
 --out pbk_btqc_mg
 # --out pbk_preimpqc_merged
