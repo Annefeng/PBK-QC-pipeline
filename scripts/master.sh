@@ -164,7 +164,7 @@ if [ $module == "pop.preimpqc" ]; then
     #          Idenitfy SNPs showing batch association       #
     #--------------------------------------------------------#
 
-    if [ $submode == "pop.run.batch.assoc" ]; then
+    if [ $submode == "run.batch.assoc" ]; then
         datadir=$6
         fbatchpr=$7
         nbatchpr=$(cat $fbatchpr | wc -l)
@@ -185,7 +185,7 @@ if [ $module == "pop.preimpqc" ]; then
         done
     fi
 
-    if [ $submode == "pop.find.batch.assoc" ]; then
+    if [ $submode == "find.batch.assoc" ]; then
         bsub -q short -o /dev/null $scrdir/13_pop_find_batch_assoc_snps.sh $pop $pop_preqcdir
     fi
 
@@ -226,7 +226,7 @@ if [ $module == "pop.preimpqc.final" ]; then
     #    Perform final SNP QC and write QC'ed plink files    #
     #--------------------------------------------------------#
 
-    if [ $submode == "pop.write.qc.plink" ]; then 
+    if [ $submode == "write.qc.plink" ]; then 
         bsub -q medium -o /dev/null $scrdir/15_pop_write_qc_plink.sh $pop $pop_preqcdir
     fi
 
@@ -234,8 +234,8 @@ if [ $module == "pop.preimpqc.final" ]; then
     # Prepare data for HRC imputation (Michigan imp. server) #
     #--------------------------------------------------------#
 
-    # Perform QC to align data with HRC for imputation
-    if [ $submode == "pop.prep.mis.imp" ]; then
+    # Perform QC to align data with HRC for imputation; chr-specific files generated
+    if [ $submode == "prep.mis.imp" ]; then
         fhrc_check_pl=$6
         fhrc_sites=$7 
         # bsub -q medium $scrdir/16_pop_prep_mis_imp.sh $pop $pop_preqcdir $fhrc_check_pl $fhrc_sites
@@ -246,10 +246,52 @@ if [ $module == "pop.preimpqc.final" ]; then
     #      Convert plink to vcf for imputation using MIS     #
     #--------------------------------------------------------#
 
-    if [ $submode == "pop.write.qc.vcf" ]; then
+    if [ $submode == "write.qc.vcf" ]; then
         bsub -q big -J make_vcf[1-22] -W 3:00 -R rusage[mem=8000] -o /dev/null "$scrdir/17_pop_write_qc_vcf.sh $pop $pop_preqcdir"
     fi
 
 fi
 
+
+
+#***********************************************************************************************#
+#                            Module: Post-imputation QC (pop-specific)                          #
+#***********************************************************************************************#
+
+if [ $module == "pop.postimpqc" ]; then
+
+    submode=$2
+    pop=$3
+    pop_postqcdir=$4
+    scrdir=$5
+
+    #--------------------------------------------------------#
+    #           Annotate imputed variants with rsID          #
+    #--------------------------------------------------------#
+
+    # Variant ID from MIS is in the form of chr:pos:ref:alt; annotate using dbSNP vcf to get rsIDs
+    if [ $submode == "annotate.imp.vcf" ]; then 
+        db_vcf=$6
+        bsub -q big -J annotvcf[1-22] -W 15:00 -R rusage[mem=10000] -o /dev/null "$scrdir/18_pop_annot_imp_vcf.sh $pop $pop_postqcdir $db_vcf"
+    fi
+
+    #--------------------------------------------------------#
+    #  Convert vcf (dosage) to plink and perform postimp QC  #
+    #--------------------------------------------------------#
+
+    if [ $submode == "vcf2plink" ]; then 
+        fupdate_fid=$6
+        fupdate_sex=$7
+        bsub -q big -J vcf2plink[1-22] -W 5:00 -R rusage[mem=8000] -o /dev/null "$scrdir/19_pop_vcf2plink.sh $pop $pop_postqcdir $fupdate_fid $fupdate_sex"
+    fi
+
+    #--------------------------------------------------------#
+    #   Create one merged plink file from chr-specifc files  #
+    #--------------------------------------------------------#
+
+    if [ $submode == "merge.imp.plink" ]; then
+        bsub -q big -R rusage[mem=8000] -o /dev/null $scrdir/20_pop_merge_chr.sh $pop $pop_postqcdir
+    fi
+
+fi
 
