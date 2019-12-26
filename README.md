@@ -122,7 +122,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | Variant QC metric  | # Variants | % Total |
 | ------------- | -------------: | -------------: |
 | Total imputed | 33,822,636 | 100% |
-| MAF < 0.01 | 26051805 | 77.0% | 
+| MAF < 0.01 | 26,051,805 | 77.0% | 
 | Imputation R2 < 0.8 | 17,443,564 | 51.6% |
 | _Any of the above two_ | 26,468,624 | 78.3% |
 | Call rate < 0.98 | 0 | 0.0% |
