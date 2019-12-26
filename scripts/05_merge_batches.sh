@@ -11,7 +11,7 @@ ls */pbk_btqc.bed | cat > merge-bed.tmp
 ls */pbk_btqc.bim | cat > merge-bim.tmp
 ls */pbk_btqc.fam | cat > merge-fam.tmp
 
-paste merge-bed.tmp merge-bim.tmp merge-fam.tmp > all_batches.txt
+paste merge-bed.tmp merge-bim.tmp merge-fam.tmp > plink-merge-all-batches.txt
 rm merge*.tmp
 
 $PLINK \

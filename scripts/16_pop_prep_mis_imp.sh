@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#### Prep data for Michigan imputation server:
-#### https://imputationserver.readthedocs.io/en/latest/prepare-your-data/
+# Prep data for Michigan imputation server:
+# https://imputationserver.readthedocs.io/en/latest/prepare-your-data/
 
 # module load perl/default
 
@@ -16,6 +16,8 @@ cd $pop_preqcdir
 
 perl $fhrc_check_pl -b ${pop}_pbk_unrel_qc_aut.bim -f ${pop}_pbk_unrel_qc_aut-af.frq -r $fhrc_sites -h
 sh Run-plink.sh
+
+# -> output: updated plink files by chromosome
 
 
 ####
