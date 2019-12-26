@@ -110,9 +110,10 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | SNP-level call rate < 0.98  | 1  | 7e-05%  |
 | pHWE < 1e-10  | 2375  | 0.18%  |
 | Non-autosomal, indel, or monomorphic  | 125,030  | 9.5%  |
-| **_HRC QC:_**  |   |   |
+| **_Post-QC_** | 1,047,588 | 79.3% |
+| **_HRC QC (for imputation):_**  |   |   |
 | Not in HRC or mismatched info  | 138,359  | 10.5%  |
-| **_Post-QC, send to Michigan imputation server_**  | 909,229  | 68.8%  |
+| **_Send to Michigan imputation server_**  | 909,229  | 68.8%  |
 
 
 
