@@ -9,11 +9,11 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 ## Quality control pipeline
 
-- QC for each genotyping batch (metrics not affected by ancestry)
-	- SNP-level call rate >0.95
-	- Sample-level call rate >0.98
-	- SNP-level call rate >0.98
-	- Maximum SNP-level missing rate difference between two batches < empirical threshold cutoff (e.g., 1%)
+* QC for each genotyping batch (metrics not affected by ancestry; `scripts 01-04`)
+	* SNP-level call rate >0.95
+	* Sample-level call rate >0.98
+	* SNP-level call rate >0.98
+	* Maximum SNP-level missing rate difference between two batches < empirical threshold cutoff (e.g., 1%)
 
 - Merge genotyping batches (`scripts 05-06`)
 	- Remove duplicated SNPs
