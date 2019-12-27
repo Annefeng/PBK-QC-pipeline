@@ -52,7 +52,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 * Post-imputation QC (converting vcf dosages to plink hard-call files; `scripts 18-20`)
 	* INFO score/Imputation R2 >0.8
-	* MAF based on imputed dosages >1%
+	* MAF (based on imputed dosages) >1%
 	* HWE >1e-10
 	* SNP-level call rate (--geno) >0.98
 
