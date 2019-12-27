@@ -9,7 +9,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 ## Quality control pipeline
 
-- QC for each genotyping batch (metrics not affected by ancestry; `scripts 01-04`)
+- QC for each genotyping batch (metrics not affected by ancestry)
 	- SNP-level call rate >0.95
 	- Sample-level call rate >0.98
 	- SNP-level call rate >0.98
@@ -119,8 +119,8 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 ## Summary of post-imputation QC
 
-| Variant QC metric  | # Variants | % Total |
-| ------------- | -------------: | -------------: |
+| Filter | Variant QC metric  | # Variants | % Total |
+| ------------- | ------------- | -------------: | -------------: |
 | Total imputed | 33,822,636 | 100% |
 | MAF < 0.01 | 26,051,805 | 77.0% | 
 | Imputation R2 < 0.8 | 17,443,564 | 51.6% |
@@ -129,3 +129,9 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | pHWE < 1e-10 | 167 | 5e-06% |
 | **_Post-QC_** | 7,353,845 | 21.7% |
 
+| MAF < 0.005 | 24,946,776 | 73.8% | 
+| Imputation R2 < 0.6 | 9,993,397 | 29.5% |
+| _Any of the above two_ | 25,100,024 | 74.2% |
+| Call rate < 0.98 | 0 | 0.0% |
+| pHWE < 1e-10 | 213 | 6e-04% |
+| **_Post-QC_** | 8,722,399 | 25.8% |
