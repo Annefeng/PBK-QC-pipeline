@@ -119,19 +119,14 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 ## Summary of post-imputation QC
 
-| Filter | Variant QC metric  | # Variants | % Total |
-| ------------- | ------------- | -------------: | -------------: |
-| Total imputed | 33,822,636 | 100% |
-| MAF < 0.01 | 26,051,805 | 77.0% | 
-| Imputation R2 < 0.8 | 17,443,564 | 51.6% |
-| _Any of the above two_ | 26,468,624 | 78.3% |
-| Call rate < 0.98 | 0 | 0.0% |
-| pHWE < 1e-10 | 167 | 5e-06% |
-| **_Post-QC_** | 7,353,845 | 21.7% |
+| Variant filter (1) | # Variants | % Total | Variant filter (2)  | # Variants | % Total |
+| ------------------ | ---------: | ------: | ------------------- | ---------: | ------: |
+| Total imputed | 33,822,636 | 100% | Total imputed | 33,822,636 | 100% | 
+| MAF < 0.01 | 26,051,805 | 77.0% | MAF < 0.005 | 24,946,776 | 73.8% | 
+| Imputation R2 < 0.8 | 17,443,564 | 51.6% | Imputation R2 < 0.6 | 9,993,397 | 29.5% |
+| _Any of the above two_ | 26,468,624 | 78.3% | _Any of the above two_ | 25,100,024 | 74.2% |
+| Call rate < 0.98 | 0 | 0.0% | Call rate < 0.98 | 0 | 0.0% |
+| pHWE < 1e-10 | 167 | 5e-06% | pHWE < 1e-10 | 213 | 6e-04% |
+| **_Post-QC_** | 7,353,845 | 21.7% | **_Post-QC_** | 8,722,399 | 25.8% |
 
-| MAF < 0.005 | 24,946,776 | 73.8% | 
-| Imputation R2 < 0.6 | 9,993,397 | 29.5% |
-| _Any of the above two_ | 25,100,024 | 74.2% |
-| Call rate < 0.98 | 0 | 0.0% |
-| pHWE < 1e-10 | 213 | 6e-04% |
-| **_Post-QC_** | 8,722,399 | 25.8% |
+
