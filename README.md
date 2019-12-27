@@ -15,46 +15,46 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 	* SNP-level call rate >0.98
 	* Maximum SNP-level missing rate difference between two batches < empirical threshold cutoff (e.g., 1%)
 
-- Merge genotyping batches (`scripts 05-06`)
-	- Remove duplicated SNPs
-	- Remove monomorphic SNPs
-	- Remove SNPs not confidently mapped (chr=0)
+* Merge genotyping batches (`scripts 05-06`)
+	* Remove duplicated SNPs
+	* Remove monomorphic SNPs
+	* Remove SNPs not confidently mapped (chr=0)
 
-- Population assignment (`scripts 07-08`)
-	- Select common, high-quality SNPs for population inference
-		- SNP-level call rate >0.98
-		- MAF >5%
-		- Remove strand ambiguous SNPs and long-range LD regions (chr6:25-35Mb; chr8:7-13Mb inversion)
-		- Prune to <100K independent SNPs
-	- Identify individuals with European ancestry using selected SNPs
-		- Run PCA combining study samples + 1KG data
-		- Use Random Forest to classify genetic ancesty with a prediciton prob. >0.9
+* Population assignment (`scripts 07-08`)
+	* Select common, high-quality SNPs for population inference
+		* SNP-level call rate >0.98
+		* MAF >5%
+		* Remove strand ambiguous SNPs and long-range LD regions (chr6:25-35Mb; chr8:7-13Mb inversion)
+		* Prune to <100K independent SNPs
+	* Identify individuals with European ancestry using selected SNPs
+		* Run PCA combining study samples + 1KG data
+		* Use Random Forest to classify genetic ancesty with a prediciton prob. >0.9
 
-- QC within European samples (metrics may be affected by ancestry; `scripts 09-13`)
-	- Remove samples that fail sex check (--check-sex)
-	- Absolute value of autosomal heterozygosity rate deviating from the mean (--het)
-	- Identify unrelated Individuals (Pi_hat <0.2) within European samples
-	- Remove SNPs that show batch associations
-		- Regress each batch indicator on SNPs, adjusting for sex (empirically pick a threshold)
+* QC within European samples (metrics may be affected by ancestry; `scripts 09-13`)
+	* Remove samples that fail sex check (--check-sex)
+	* Absolute value of autosomal heterozygosity rate deviating from the mean (--het)
+	* Identify unrelated Individuals (Pi_hat <0.2) within European samples
+	* Remove SNPs that show batch associations
+		* Regress each batch indicator on SNPs, adjusting for sex (empirically pick a threshold)
 
-- Calculate PCs within unrelated European samples using common, high-quality SNPs (`script 14`)
+* Calculate PCs within unrelated European samples using common, high-quality SNPs (`script 14`)
 
-- Final SNP-level QC within unrelated European samples (`script 15`)
-	- SNP-level call rate >0.98
-	- HWE >1e-10
-	- Retain only autosomal SNPs, excluding indels and monomorphic SNPs (for imputation; HRC: SNP only)
+* Final SNP-level QC within unrelated European samples (`script 15`)
+	* SNP-level call rate >0.98
+	* HWE >1e-10
+	* Retain only autosomal SNPs, excluding indels and monomorphic SNPs (for imputation; HRC: SNP only)
 
-- Prepare data for HRC imputation using Michigan server (`scripts 16-17`)
-	- Harmonize study data with HRC data
-	- Convert plink to vcf by chromosome
+* Prepare data for HRC imputation using Michigan server (`scripts 16-17`)
+	* Harmonize study data with HRC data
+	* Convert plink to vcf by chromosome
 
-- Send unrelated European samples to Michigan server for imputation (using HRC as the reference panel)
+* Send unrelated European samples to Michigan server for imputation (using HRC as the reference panel)
 
-- Post-imputation QC (converting vcf dosages to plink hard-call files; `scripts 18-20`)
-	- INFO score/Imputation R2 >0.8
-	- MAF >1%
-	- HWE >1e-10
-	- SNP-level call rate (--geno) >0.98
+* Post-imputation QC (converting vcf dosages to plink hard-call files; `scripts 18-20`)
+	* INFO score/Imputation R2 >0.8
+	* MAF >1%
+	* HWE >1e-10
+	* SNP-level call rate (--geno) >0.98
 
 
 
