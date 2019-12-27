@@ -32,7 +32,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 * QC within European samples (metrics may be affected by ancestry; `scripts 09-13`)
 	* Remove samples that fail sex check (--check-sex)
-	* Absolute value of autosomal heterozygosity rate deviating from the mean (--het)
+	* Absolute value of autosomal heterozygosity rate deviating from the mean (e.g., 3SD; --het)
 	* Identify unrelated Individuals (Pi_hat <0.2) within European samples
 	* Remove SNPs that show batch associations
 		* Regress each batch indicator on SNPs, adjusting for sex (empirically pick a threshold)
@@ -52,7 +52,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 * Post-imputation QC (converting vcf dosages to plink hard-call files; `scripts 18-20`)
 	* INFO score/Imputation R2 >0.8
-	* MAF >1%
+	* MAF based on imputed dosages >1%
 	* HWE >1e-10
 	* SNP-level call rate (--geno) >0.98
 
@@ -122,7 +122,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 | Variant filter (1) | # Variants | % Total |   | Variant filter (2)  | # Variants | % Total |
 | ------------------ | ---------: | ------: |---| ------------------- | ---------: | ------: |
 | Total imputed | 33,822,636 | 100% | 		    | Total imputed | 33,822,636 | 100% | 
-| MAF < 0.01 | 26,051,805 | 77.0% |             | MAF < 0.005 | 24,946,776 | 73.8% | 
+| MAF (dosage) < 0.01 | 26,051,805 | 77.0% |    | MAF (dosage) < 0.005 | 24,946,776 | 73.8% | 
 | Imputation R2 < 0.8 | 17,443,564 | 51.6% |    | Imputation R2 < 0.6 | 9,993,397 | 29.5% |
 | _Any of the above two_ | 26,468,624 | 78.3% | | _Any of the above two_ | 25,100,024 | 74.2% |
 | Call rate < 0.98 | 0 | 0.0% |                 | Call rate < 0.98 | 0 | 0.0% |
