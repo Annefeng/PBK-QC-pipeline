@@ -280,9 +280,11 @@ if [ $module == "pop.postimpqc" ]; then
     #--------------------------------------------------------#
 
     if [ $submode == "vcf2plink" ]; then 
-        fupdate_fid=$6
-        fupdate_sex=$7
-        bsub -q big -J vcf2plink[1-22] -W 5:00 -R rusage[mem=8000] -o /dev/null "$scrdir/19_pop_vcf2plink.sh $pop $pop_postqcdir $fupdate_fid $fupdate_sex"
+        maf_thresh=$6
+        impRsq_thresh=$7
+        fupdate_fid=$8
+        fupdate_sex=$9
+        bsub -q big -J vcf2plink[1-22] -W 5:00 -R rusage[mem=8000] -o /dev/null "$scrdir/19_pop_vcf2plink.sh $pop $pop_postqcdir $maf_thresh $impRsq_thresh $fupdate_fid $fupdate_sex"
     fi
 
     #--------------------------------------------------------#
@@ -290,7 +292,9 @@ if [ $module == "pop.postimpqc" ]; then
     #--------------------------------------------------------#
 
     if [ $submode == "merge.imp.plink" ]; then
-        bsub -q big -R rusage[mem=8000] -o /dev/null $scrdir/20_pop_merge_chr.sh $pop $pop_postqcdir
+        maf_thresh=$6
+        impRsq_thresh=$7
+        bsub -q big -R rusage[mem=8000] -o /dev/null $scrdir/20_pop_merge_chr.sh $pop $pop_postqcdir $maf_thresh $impRsq_thresh
     fi
 
 fi

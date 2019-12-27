@@ -45,8 +45,11 @@ sh $scr/master.sh pop.preimpqc.final write.qc.vcf eur $wd/eur_preimp_qc $wd/scri
 
 ### pop-specific postimpqc
 sh $scr/master.sh pop.postimpqc annotate.imp.vcf eur $wd/eur_postimp_qc $wd/scripts $wd/misc/dbSNP_b151_GRCh37_all_20180423.vcf.gz
-sh $scr/master.sh pop.postimpqc vcf2plink eur $wd/eur_postimp_qc $wd/scripts $wd/misc/update_fid.tsv $wd/misc/update_sex.tsv
-sh $scr/master.sh pop.postimpqc merge.imp.plink eur $wd/eur_postimp_qc $wd/scripts
 
+sh $scr/master.sh pop.postimpqc vcf2plink eur $wd/eur_postimp_qc $wd/scripts 0.01 0.8 $wd/misc/update_fid.tsv $wd/misc/update_sex.tsv
+sh $scr/master.sh pop.postimpqc vcf2plink eur $wd/eur_postimp_qc $wd/scripts 0.005 0.6 $wd/misc/update_fid.tsv $wd/misc/update_sex.tsv
+
+sh $scr/master.sh pop.postimpqc merge.imp.plink eur $wd/eur_postimp_qc $wd/scripts 0.01 0.8
+sh $scr/master.sh pop.postimpqc merge.imp.plink eur $wd/eur_postimp_qc $wd/scripts 0.005 0.6
 
 
