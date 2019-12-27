@@ -120,7 +120,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 ## Summary of post-imputation QC
 
 | Variant filter (1) | # Variants | % Total | | Variant filter (2)  | # Variants | % Total |
-| ------------------ | ---------: | ------: | | ------------------- | ---------: | ------: |
+| ------------------ | ---------: | ------: |---| ------------------- | ---------: | ------: |
 | Total imputed | 33,822,636 | 100% | 		  | Total imputed | 33,822,636 | 100% | 
 | MAF < 0.01 | 26,051,805 | 77.0% |           | MAF < 0.005 | 24,946,776 | 73.8% | 
 | Imputation R2 < 0.8 | 17,443,564 | 51.6% |  | Imputation R2 < 0.6 | 9,993,397 | 29.5% |
