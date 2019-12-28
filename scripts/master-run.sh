@@ -1,5 +1,5 @@
 
-## NOTE: each job is dependent upon the previous job; do not submit them all at once
+## NOTE: most of the jobs are dependent upon the previous job; do not submit them all at once
 
 # scr=/data/js95/yfeng/projects/tmp/scripts
 # wd=/data/js95/yfeng/projects/tmp
