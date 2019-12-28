@@ -35,7 +35,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 	* Absolute value of autosomal heterozygosity rate deviating from the mean (e.g., 3SD; --het)
 	* Identify unrelated Individuals (Pi_hat <0.2) within European samples
 	* Remove SNPs that show batch associations
-		* Regress each batch indicator on SNPs, adjusting for sex (empirically pick a threshold)
+		* Regress each batch indicator on SNPs, adjusting for sex (association P < empirical threshold cutoff)
 
 * Calculate PCs within unrelated European samples using common, high-quality SNPs (`script 14`)
 
@@ -50,11 +50,11 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 * Send unrelated European samples to Michigan server for imputation (using HRC as the reference panel)
 
-* Post-imputation QC (converting vcf dosages to plink hard-call files; `scripts 18-20`)
+* Post-imputation QC (converting vcf dosages to plink hard-call genotypes; `scripts 18-20`)
 	* INFO score/Imputation R2 >0.8
 	* MAF (based on imputed dosages) >1%
 	* HWE >1e-10
-	* SNP-level call rate (--geno) >0.98
+	* SNP-level call rate >0.98
 
 
 
@@ -72,7 +72,7 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 
 
 ### Sample QC
-- Samples are genotyped in 8 batches, with the first 7 batches each containing 5K individuas and the 8th batch around 900 individuals
+- Samples are genotyped on 8 batches, with the first 7 batches each containing ~5K individuas and the 8th batch around 900 individuals
 
 | Sample QC metric | # Samples | % Total |
 | ---------------- | -------: | -----: |
