@@ -39,17 +39,17 @@ sh $scr/master.sh pop.pca eur $wd/eur_preimp_qc $wd/eur_pca /data/js95/yfeng/uti
 
 ### pop-specific prepimpqc: final
 sh $scr/master.sh pop.preimpqc.final write.qc.plink eur $wd/eur_preimp_qc $wd/scripts 
-sh $scr/master.sh pop.preimpqc.final prep.mis.imp eur $wd/eur_preimp_qc $wd/scripts $wd/misc/HRC-1000G-check-bim-v4.2.7/HRC-1000G-check-bim.pl $wd/misc/HRC.r1-1.GRCh37.wgs.mac5.sites.tab &
+sh $scr/master.sh pop.preimpqc.final prep.mis.imp eur $wd/eur_preimp_qc $wd/scripts HRC $wd/misc/HRC-1000G-check-bim-v4.2.7/HRC-1000G-check-bim.pl $wd/misc/HRC.r1-1.GRCh37.wgs.mac5.sites.tab &
+# sh $scr/master.sh pop.preimpqc.final prep.mis.imp eur $wd/eur_preimp_qc $wd/scripts 1KG $wd/misc/HRC-1000G-check-bim-v4.2.7/HRC-1000G-check-bim.pl $wd/misc/1000GP_Phase3_combined.legend.gz &
 sh $scr/master.sh pop.preimpqc.final write.qc.vcf eur $wd/eur_preimp_qc $wd/scripts
 
 
 ### pop-specific postimpqc
 sh $scr/master.sh pop.postimpqc annotate.imp.vcf eur $wd/eur_postimp_qc $wd/scripts $wd/misc/dbSNP_b151_GRCh37_all_20180423.vcf.gz
 
-sh $scr/master.sh pop.postimpqc vcf2plink eur $wd/eur_postimp_qc $wd/scripts 0.01 0.8 $wd/misc/update_fid.tsv $wd/misc/update_sex.tsv
-sh $scr/master.sh pop.postimpqc vcf2plink eur $wd/eur_postimp_qc $wd/scripts 0.005 0.6 $wd/misc/update_fid.tsv $wd/misc/update_sex.tsv
+sh $scr/master.sh pop.postimpqc vcf2plink eur $wd/eur_postimp_qc $wd/scripts 0.01 0.8 $wd/misc/update_fid-eur.tsv $wd/misc/update_sex-eur.tsv
+sh $scr/master.sh pop.postimpqc vcf2plink eur $wd/eur_postimp_qc $wd/scripts 0.005 0.6 $wd/misc/update_fid-eur.tsv $wd/misc/update_sex-eur.tsv
 
 sh $scr/master.sh pop.postimpqc merge.imp.plink eur $wd/eur_postimp_qc $wd/scripts 0.01 0.8
 sh $scr/master.sh pop.postimpqc merge.imp.plink eur $wd/eur_postimp_qc $wd/scripts 0.005 0.6
-
 
