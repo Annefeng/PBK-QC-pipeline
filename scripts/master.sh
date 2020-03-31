@@ -231,10 +231,10 @@ if [ $module == "pop.preimpqc.final" ]; then
     fi
 
     #--------------------------------------------------------#
-    # Prepare data for HRC imputation (Michigan imp. server) #
+    # Prepare data for HRC/1KG imputation (Michigan server)  #
     #--------------------------------------------------------#
 
-    # Perform QC to align data with HRC for imputation; chr-specific files generated
+    # Perform QC to align data with HRC or 1KG for imputation; chr-specific files generated
     if [ $submode == "prep.mis.imp" ]; then
         ref_panel=$6
         fref_check_pl=$7
