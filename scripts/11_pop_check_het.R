@@ -16,7 +16,7 @@ ggplot(het, aes(F)) +
   geom_histogram(alpha=0.6, binwidth=0.01, color="black", fill="#4DBBD5B2") +
   xlab("Inbreeding coefficient (F-stat)") +
   ylab("Frequency") +
-  ggtitle("EUR sample QC") +
+  ggtitle(paste0(toupper(pop)," sample QC")) +
   geom_vline(xintercept=-0.2, linetype="dashed") +
   geom_vline(xintercept=0.2, linetype="dashed") +
   theme_bw()
@@ -32,7 +32,7 @@ ggplot(het, aes(HetRate)) +
   geom_histogram(alpha=0.6, binwidth=0.001, color="black", fill="#4DBBD5B2") +
   xlab("Heterozygosity rate") +
   ylab("Frequency") +
-  ggtitle("EUR sample QC") +
+  ggtitle(paste0(toupper(pop)," sample QC")) +
   geom_vline(xintercept=cutoff1[1], linetype="dashed") +
   geom_vline(xintercept=cutoff1[2], linetype="dashed") +
   geom_vline(xintercept=cutoff2[1], linetype="dashed") +

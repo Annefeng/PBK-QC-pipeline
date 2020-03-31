@@ -23,7 +23,7 @@ p <- ggplot(imp_sex, aes(x=F, fill=SNPSEX)) +
   geom_vline(xintercept=0.2, linetype="dashed") + #default cutoff: <0.2: female
   theme_bw() +
   labs(x='F-statistic',y='Frequency',
-       title='EUR sample QC',
+       title=paste0(toupper(pop),' sample QC'),
        fill='Imputed sex') +
   scale_fill_manual(values = c("grey30","#56B4E9","#FD8D3C"),labels=c("Unknown","Male","Female"))
 ggsave(paste0(pop,"_pbk_sexcheck_fstat_F02_M08.pdf"), p, width=7.5, height=4)
@@ -34,14 +34,14 @@ pdf(paste0(pop,"_pbk_sexcheck_fstat_F02_M08_ped.vs.snpsex.pdf"), width=7.5, heig
 ggplot(imp_sex, aes(y=F,x=factor(SNPSEX), color=factor(SNPSEX))) +
   geom_jitter(alpha=0.7) +
   labs(x='Imputed gender',y='chrX F-statistic',
-       title='EUR sample QC',
+       title=paste0(toupper(pop),' sample QC'),
        color='Imputed gender') +
   scale_color_manual(values = c("#7F7F7FFF","#56B4E9","#FD8D3C")) +
   theme_bw()
 ggplot(imp_sex, aes(y=F,x=factor(SNPSEX), color=factor(PEDSEX))) +
   geom_jitter(alpha=0.7) +
   labs(x='Imputed gender',y='chrX F-statistic',
-       title='EUR sample QC',
+       title=paste0(toupper(pop),' sample QC'),
        color='Reported gender') +
   scale_color_manual(values = c("#56B4E9","#FD8D3C")) +
   theme_bw()

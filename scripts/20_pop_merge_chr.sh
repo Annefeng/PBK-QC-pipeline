@@ -32,6 +32,10 @@ if [ ! -f ${pop}_pbk_unrel_qc_aut.imp.varid.rsid.tsv ]; then
 	awk '{if($2==""){print $1"\t"$1}else{print $1"\t"$2}}' varid_rsid-tmp > ${pop}_pbk_unrel_qc_aut.imp.varid.rsid.tsv && rm varid_rsid-tmp
 fi
 
+# # Remove any duplicates
+# sort afr_pbk_unrel_qc_aut.imp.varid.rsid.tsv | uniq > tmp && mv tmp afr_pbk_unrel_qc_aut.imp.varid.rsid.tsv
+
+
 $PLINK \
 --bfile ${pop}_pbk_unrel_qc_aut.imp.maf${maf_thresh}.impRsq${impRsq_thresh}-tmp \
 --update-name ${pop}_pbk_unrel_qc_aut.imp.varid.rsid.tsv 2 1 \

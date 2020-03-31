@@ -61,16 +61,16 @@ rm ${pop}_pbk_btqc_mgqc-rsid.keep.snplist
 
 ref=/data/js95/yfeng/utility/1kG/ALL.1KG_phase3.20130502.genotypes.maf005
 
-# Subset to EUR samples in the ref panel
-if [ pop == "eur" ]; then 
+# Subset to pop-specific samples in the ref panel
+if [ $pop == "eur" ]; then 
     awk '$1=="CEU" || $1=="TSI" || $1=="FIN" || $1=="GBR" || $1=="IBS"' $ref.fam | awk '{print $1"\t"$2}' > $ref.${pop}.fam
-elif [ pop == "afr" ]; then 
+elif [ $pop == "afr" ]; then 
     awk '$1=="YRI" || $1=="LWK" || $1=="GWD" || $1=="MSL" || $1=="ESN" || $1=="ASW" || $1=="ACB"' $ref.fam | awk '{print $1"\t"$2}' > $ref.${pop}.fam 
-elif [ pop == "eas" ]; then 
+elif [ $pop == "eas" ]; then 
     awk '$1=="CHB" || $1=="JPT" || $1=="CHS" || $1=="CDX" || $1=="KHV"' $ref.fam | awk '{print $1"\t"$2}' > $ref.${pop}.fam
-elif [ pop == "amr" ]; then
-    awk '$1=="MXL" || $1=="JPT" || $1=="PUR" || $1=="CLM" || $1=="PEL"' $ref.fam | awk '{print $1"\t"$2}' > $ref.${pop}.fam
-elif [ pop == "sas" ]; then
+elif [ $pop == "amr" ]; then
+    awk '$1=="MXL" || $1=="PUR" || $1=="CLM" || $1=="PEL"' $ref.fam | awk '{print $1"\t"$2}' > $ref.${pop}.fam
+elif [ $pop == "sas" ]; then
     awk '$1=="GIH" || $1=="PJL" || $1=="BEB" || $1=="STU" || $1=="ITU"' $ref.fam | awk '{print $1"\t"$2}' > $ref.${pop}.fam
 fi
 

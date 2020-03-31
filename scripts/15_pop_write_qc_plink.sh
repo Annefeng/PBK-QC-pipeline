@@ -15,7 +15,7 @@ $PLINK \
 --make-bed \
 --out ${pop}_pbk_unrel-tmp
 
-# Perform final SNP-level QC on predicted EUR samples 
+# Perform final SNP-level QC on predicted pop-specific samples 
 $PLINK \
 --bfile ${pop}_pbk_unrel-tmp \
 --geno 0.02 \

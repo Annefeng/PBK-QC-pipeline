@@ -13,7 +13,7 @@ library(RColorBrewer)
 # Read in data
 ibd <- read.table(gzfile(paste0(pop,"_pbk_btqc_mgqc-ibd-min0.125.genome.gz")), header=T)
 
-# Plot relatedness among EUR samples: Z0 vs. Z1 by inferred relationship
+# Plot relatedness among pop-specific samples: Z0 vs. Z1 by inferred relationship
 ibd$inferred_rel <- "Other relatedness"
 ibd$inferred_rel <- ifelse(ibd$PI_HAT <= 0.2,
                           "Unrelated", ibd$inferred_rel)
@@ -31,6 +31,7 @@ ibd$inferred_rel <- factor(ibd$inferred_rel, levels=c("Duplicates/MZ-twins",
                                                       "Unrelated"))
 
 table(ibd$inferred_rel)
+# pop="eur":
 # Duplicates/MZ-twins    Parent-offspring            Siblings   Other relatedness
 #                  19                 349                 295                 341
 #           Unrelated
@@ -52,7 +53,7 @@ ggsave(paste0(pop,"_pbk_ibd_Z0.vs.Z1.pdf"), p, width=6.8, height=5)
 
 # Remove one from each pair of related individuals
 ibd_rel <- subset(ibd, PI_HAT > 0.2)
-dim(ibd_rel) #1804
+dim(ibd_rel) # pop="eur":1804
 samples <- names(sort(table(unlist(ibd_rel[,c('IID1', 'IID2')])), decreasing=TRUE))
 removed <- character()
 
@@ -77,8 +78,8 @@ for (row in 1:dim(ibd_rel)[1]) {
   k=k+1
   print(k)
 }
-length(removed) # 908
-length(samples) # 896
+length(removed) # pop="eur":908
+length(samples) # pop="eur":896
 
 
 # Merge IID with FID for export
@@ -87,7 +88,7 @@ names(tmp1) <- c('FID', 'IID')
 tmp2 <- ibd_rel[, c('FID2','IID2')]
 names(tmp2) <- c('FID', 'IID')
 ibd_rel_inds <- rbind(tmp1, tmp2)
-ibd_rel_inds <- ibd_rel_inds %>% distinct()  #1804
+ibd_rel_inds <- ibd_rel_inds %>% distinct()  # pop="eur":1804
 ibd_rel_inds_remove <- subset(ibd_rel_inds, IID %in% removed)
 
 # Write out a list of relatedness individuals for removal

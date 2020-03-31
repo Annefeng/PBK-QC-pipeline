@@ -236,10 +236,11 @@ if [ $module == "pop.preimpqc.final" ]; then
 
     # Perform QC to align data with HRC for imputation; chr-specific files generated
     if [ $submode == "prep.mis.imp" ]; then
-        fhrc_check_pl=$6
-        fhrc_sites=$7 
-        # bsub -q medium $scrdir/16_pop_prep_mis_imp.sh $pop $pop_preqcdir $fhrc_check_pl $fhrc_sites
-        sh $scrdir/16_pop_prep_mis_imp.sh $pop $pop_preqcdir $fhrc_check_pl $fhrc_sites
+        ref_panel=$6
+        fref_check_pl=$7
+        fref_sites=$8
+        # bsub -q medium $scrdir/16_pop_prep_mis_imp.sh $pop $pop_preqcdir $ref_panel $fref_check_pl $fref_sites
+        sh $scrdir/16_pop_prep_mis_imp.sh $pop $pop_preqcdir $ref_panel $fref_check_pl $fref_sites
     fi
 
     #--------------------------------------------------------#
