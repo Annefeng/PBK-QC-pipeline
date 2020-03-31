@@ -44,8 +44,8 @@ The current dataset (`as of Dec. 2019`) includes 36,424 individuals genotyped on
 	* HWE >1e-10
 	* Retain only autosomal SNPs, excluding indels and monomorphic SNPs (for imputation; HRC: SNP only)
 
-* Prepare data for HRC imputation using Michigan server (`scripts 16-17`)
-	* Harmonize study data with HRC data
+* Prepare data for HRC/1KG imputation using Michigan server (`scripts 16-17`)
+	* Harmonize study data with HRC/1KG data
 	* Convert plink to vcf by chromosome
 
 * Send unrelated European samples to Michigan server for imputation (using HRC as the reference panel)
